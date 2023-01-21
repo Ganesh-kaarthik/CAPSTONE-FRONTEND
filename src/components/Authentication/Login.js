@@ -54,7 +54,7 @@ const Login = () => {
       toast({
         title: "Login Successful Refresh to start chating",
         status: "success",
-        duration: 3000,
+        duration: 60000,
         isClosable: true,
         position: "bottom",
       });
