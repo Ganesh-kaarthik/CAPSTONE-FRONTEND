@@ -28,9 +28,9 @@ function SignUp() {
   // const history = useHistory();
   const handleClick = () => setShow(!show);
 
-  const postDetails = (pic) => {
+  const postDetails = (pics) => {
     setpicLoading(true);
-    if (pic === undefined) {
+    if (pics === undefined) {
       toast({
         title: "Please select an image.",
 
@@ -42,10 +42,10 @@ function SignUp() {
       return;
     }
 
-    console.log(pic);
-    if (pic.type === "image/jpeg" || pic.type === "image/png") {
+    console.log(pics);
+    if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
-      data.append("file", pic);
+      data.append("file", pics);
       data.append("upload_preset", "chatApp");
       data.append("cloud_name", "dpvu8vla2");
       fetch("https://api.cloudinary.com/v1_1/dpvu8vla2/image/upload", {
